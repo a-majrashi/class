@@ -1,1 +1,9 @@
-test 
+The following alert [# th:text="${alertingResult != null} ? (${thresholdProfile.profileName}) : 'UNKNOWN'"][/] has been crossed with [# th:text="${alertingResult != null} ? (${alertingResult.alertSeverity}) : 'UNKNOWN'"][/] severity: $EOL
+$EOL
+[# th:text="${alertingResult != null} ? (${alertingResult.metricClass}) : 'UNKNOWN'"][/] - [# th:text="${alertingResult != null} ? (${alertingResult.metricField}) : 'UNKNOWN'"][/] : [(${metricValue})] [(${metricUnits})] $EOL
+$EOL
+Threshold Component Name : [(${tacName})] $EOL
+[# th:if="${url} != null"]NetIM URL: [# th:text="${url}"][/][/] $EOL
+[# th:if="${thresholdAlertComponent.minorThresholdValue} != -1"]Minor Threshold Value : [(${thresholdAlertComponent.minorThresholdValue})] $EOL[/]
+[# th:if="${thresholdAlertComponent.majorThresholdValue} != -1"]Major Threshold Value : [(${thresholdAlertComponent.majorThresholdValue})] $EOL[/]
+[# th:if="${thresholdAlertComponent.criticalThresholdValue} != -1"]Critical Threshold Value : [(${thresholdAlertComponent.criticalThresholdValue})] $EOL[/]
